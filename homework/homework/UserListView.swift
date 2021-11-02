@@ -29,6 +29,7 @@ class UserListViewModal: ObservableObject {
     
     func fetchUserListData(){
         loading = true
+        errorMsg = nil
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
