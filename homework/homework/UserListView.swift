@@ -115,7 +115,7 @@ struct UserListView: View {
             return  AnyView(ProgressView().progressViewStyle(CircularProgressViewStyle(tint: Color.red)))
         }
         else if let error = viewModel.errorMsg {
-            // show error message (you can turn off WI-FI to produce a error)
+            // show error message (you can turn off WI-FI to produce a error before loading)
             let stack = VStack {
                 Text("An Error Occured").font(.title)
                 Text(error).font(.callout).multilineTextAlignment(.center).padding(.bottom, 40).padding()
